@@ -19,7 +19,7 @@ public static class JobSchedulerExtensions
         {
             JobState.Waiting => Icons.Clock.ToIcon().Color(Colors.Gray).Small(),
             JobState.Running => Icons.LoaderCircle.ToIcon().Small().WithAnimation(AnimationType.Rotate).Duration(1),
-            JobState.Finished => Icons.Check.ToIcon().Small().Color(Colors.Green),
+            JobState.Finished => Icons.Check.ToIcon().Small().Color(Colors.Primary),
             JobState.Failed => Icons.X.ToIcon().Small().Color(Colors.Red).WithTooltip("Failed"),
             JobState.Cancelled => Icons.X.ToIcon().Small().Color(Colors.Yellow).WithTooltip("Cancelled"),
             _ => Icons.None.ToIcon().Small()

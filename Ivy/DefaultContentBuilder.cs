@@ -108,7 +108,7 @@ public class DefaultContentBuilder : IContentBuilder
 
         if (content is bool boolContent)
         {
-            return boolContent ? new Icon(Icons.Check).Color(Colors.Green) : new Icon(Icons.None);  
+            return boolContent ? new Icon(Icons.Check).Color(Colors.Primary) : new Icon(Icons.None);  
         }
         
         if (content is string stringContent)

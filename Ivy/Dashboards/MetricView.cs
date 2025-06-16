@@ -54,12 +54,12 @@ public class MetricView(
                     | Text.H3(x.MetricFormatted).NoWrap().Overflow(Overflow.Clip)
                     | (x.TrendComparedToPreviousPeriod != null
                         ? x.TrendComparedToPreviousPeriod >= 0
-                            ? Icons.TrendingUp.ToIcon().Color(Colors.Green)
+                            ? Icons.TrendingUp.ToIcon().Color(Colors.Primary)
                             : Icons.TrendingDown.ToIcon().Color(Colors.Red)
                         : null)
                     | (x.TrendComparedToPreviousPeriod != null
                         ? x.TrendComparedToPreviousPeriod >= 0
-                            ? Text.Small(x.TrendComparedToPreviousPeriod.Value.ToString("P1")).Color(Colors.Emerald)
+                            ? Text.Small(x.TrendComparedToPreviousPeriod.Value.ToString("P1")).Color(Colors.Primary)
                             : Text.Small(x.TrendComparedToPreviousPeriod.Value.ToString("P1")).Color(Colors.Red)
                         : null),
                 x.GoalAchieved != null ? new Progress((int)Math.Round(x.GoalAchieved.Value * 100.0)).ColorVariant(Progress.ColorVariants.EmeraldGradient).Goal(x.GoalFormatted) : null

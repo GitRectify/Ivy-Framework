@@ -10,7 +10,7 @@ public record Box : WidgetBase<Box>
     {
     }
 
-    [Prop] public Colors? Color { get; set; } = Colors.Green;
+    [Prop] public Colors? Color { get; set; } = Colors.Primary;
 
     [Prop] public Thickness BorderThickness { get; set; } = new(2);
 

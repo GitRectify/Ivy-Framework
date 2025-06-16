@@ -8,7 +8,7 @@ interface ProgressWidgetProps {
   id: string;
   goal?: string;
   value?: number;
-  colorVariant: 'Primary' | 'EmeraldGradient'
+  colorVariant: 'Primary'
   width?: string;
 }
 
@@ -58,7 +58,7 @@ export const ProgressWidget: React.FC<ProgressWidgetProps> = ({ value, goal, col
           )}>
           {!isCompleted && <Target size={14} className="mr-1" strokeWidth={1.5} />}
           <span className="">{goal}</span>
-          {isCompleted && <Check size={14} className="ml-1" strokeWidth={4} color="var(--emerald-2)" />}
+          {isCompleted && <Check size={14} className="ml-1" strokeWidth={4} color="var(--primary)" />}
         </div>
         )}
           <Progress
